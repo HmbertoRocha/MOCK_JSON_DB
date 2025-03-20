@@ -8,7 +8,13 @@ const PORT = process.env.PORT;
 app.set('view engine', 'ejs');
 app.set('viewa', './views');
 
+//Middleware
+app.set('view engine', 'ejs');
+app.set('views', './views');
 
-app.listen(PORT, ()=>{
-    console.log(`Connected on port: ${PORT}`);
-});
+ //
+ app.use(express.static('public'));
+
+ app.listen(PORT,() =>{
+    console.log(`Connected on port ${PORT}`)
+ });
