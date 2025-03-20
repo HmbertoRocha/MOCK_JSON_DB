@@ -19,6 +19,10 @@ app.use((req, res, next)=>{
     next();
 });
 
+app.get('/home', (req, res) =>{
+    console.log('This is always triggered secondly')
+})
+
 
 app.listen(PORT, ()=>{
     console.log(`Connected on port: ${PORT}`);
